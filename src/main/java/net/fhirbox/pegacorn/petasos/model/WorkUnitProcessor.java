@@ -28,5 +28,7 @@ package net.fhirbox.pegacorn.petasos.model;
  * @author mhunter
  */
 public class WorkUnitProcessor {
+    private WUPIdentifier wupID;
+    private PetasosParcel activeParcel;
     
 }

@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2020 ACT Health (Mark A. Hunter).
@@ -23,38 +23,16 @@
  */
 package net.fhirbox.pegacorn.petasos.model;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+
 /**
  *
- * @author mhunter
+ * @author ACT Health (Mark A. Hunter)
  */
-public class ComponentIdentifier {
-    private String identifierType; // What is the type of identifier being used?
-    private String identifierValue; // What is the value of the identifier?
-    private ComponentTypeEnum componentType; // What is the type of Component?
-
-    public String getIdentifierType() {
-        return identifierType;
-    }
-
-    public void setIdentifierType(String identifierType) {
-        this.identifierType = identifierType;
-    }
-
-    public String getIdentifierValue() {
-        return identifierValue;
-    }
-
-    public void setIdentifierValue(String identifierValue) {
-        this.identifierValue = identifierValue;
-    }
-
-    public ComponentTypeEnum getComponentType() {
-        return componentType;
-    }
-
-    public void setComponentType(ComponentTypeEnum componentType) {
-        this.componentType = componentType;
-    }
-    
+public class PetasosWUPWatchdogState {
+    private WUPIdentifier wupID;
+    private ComponentWatchdogStateEnum wupStatus;
+    private Instant lastStatusUpdate;
     
 }

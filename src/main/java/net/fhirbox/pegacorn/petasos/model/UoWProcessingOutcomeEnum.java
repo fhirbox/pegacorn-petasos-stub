@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2020 ACT Health (Mark A. Hunter).
@@ -25,36 +25,21 @@ package net.fhirbox.pegacorn.petasos.model;
 
 /**
  *
- * @author mhunter
+ * @author ACT Health (Mark A. Hunter)
  */
-public class ComponentIdentifier {
-    private String identifierType; // What is the type of identifier being used?
-    private String identifierValue; // What is the value of the identifier?
-    private ComponentTypeEnum componentType; // What is the type of Component?
-
-    public String getIdentifierType() {
-        return identifierType;
-    }
-
-    public void setIdentifierType(String identifierType) {
-        this.identifierType = identifierType;
-    }
-
-    public String getIdentifierValue() {
-        return identifierValue;
-    }
-
-    public void setIdentifierValue(String identifierValue) {
-        this.identifierValue = identifierValue;
-    }
-
-    public ComponentTypeEnum getComponentType() {
-        return componentType;
-    }
-
-    public void setComponentType(ComponentTypeEnum componentType) {
-        this.componentType = componentType;
+public enum UoWProcessingOutcomeEnum {
+    PEGACORN_UOW_OUTCOME_SUCCESS("pegacorn.uow.processingoutcome.success"),
+    PEGACORN_UOW_OUTCOME_FAILED("pegacorn.uow.processingoutcome.failed"),
+    PEGACORN_UOW_OUTCOME_INCOMPLETE("pegacorn.uow.processingoutcome.incomplete");
+    
+    private String uowProcessingOutcome;
+    
+    private UoWProcessingOutcomeEnum(String uowProcessingOutcome ){
+        this.uowProcessingOutcome = uowProcessingOutcome;
     }
     
+    public String getUoWProcessingOutcome(){
+        return(this.uowProcessingOutcome);
+    }
     
 }

@@ -27,6 +27,8 @@ package net.fhirbox.pegacorn.petasos.model;
  *
  * @author mhunter
  */
-public class PetasosParcelIdentifier {
-    
+public class PetasosParcelIdentifier extends ComponentIdentifier {
+    private String sourceWUPID; // the Component Identifier of the WUP as a String.
+    private String uowID; // the UoW Identifier as a String.
+    private String discriminator; // the unique bit for this PetasosParcel
 }

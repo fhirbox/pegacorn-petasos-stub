@@ -23,10 +23,17 @@
  */
 package net.fhirbox.pegacorn.petasos.model;
 
+import java.util.Set;
+
 /**
  *
  * @author mhunter
  */
 public class PetasosParcel {
+    private PetasosParcelRegistration parcelRegistration;
+    private UnitOfWork actualUnitOfWork;
+    private Set<PetasosParcelIdentifier> successorParcels;
+    private PetasosWUPWatchdogState taskProcessorState;
+    private PetasosParcelIdentifier precursorParcel;
     
 }

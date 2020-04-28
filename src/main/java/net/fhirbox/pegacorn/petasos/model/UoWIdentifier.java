@@ -28,5 +28,7 @@ package net.fhirbox.pegacorn.petasos.model;
  * @author mhunter
  */
 public class UoWIdentifier {
+    public String wupID;
+    public String indentfierValue;
     
 }

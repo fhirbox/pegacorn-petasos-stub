@@ -27,6 +27,10 @@ package net.fhirbox.pegacorn.petasos.model;
  *
  * @author mhunter
  */
-public class WUPIdentifier {
+public class WUPIdentifier extends ComponentIdentifier {
+
+    public WUPIdentifier(){
+        super();
+    }
     
 }

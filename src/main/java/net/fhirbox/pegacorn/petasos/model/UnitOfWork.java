@@ -23,10 +23,47 @@
  */
 package net.fhirbox.pegacorn.petasos.model;
 
+import java.util.Set;
+
 /**
  *
  * @author mhunter
  */
 public class UnitOfWork {
-    
+    private UoWIdentifier uowID;
+    private Set<String> uowIngressContent; // JSON Objects
+    private Set<String> uowEgressContent; // JSON Objects
+    private UoWProcessingOutcomeEnum uowProcessingOutcome;
+
+    public UoWIdentifier getUowID() {
+        return uowID;
+    }
+
+    public void setUowID(UoWIdentifier uowID) {
+        this.uowID = uowID;
+    }
+
+    public Set<String> getUowIngressContent() {
+        return uowIngressContent;
+    }
+
+    public void setUowIngressContent(Set<String> uowIngressContent) {
+        this.uowIngressContent = uowIngressContent;
+    }
+
+    public Set<String> getUowEgressContent() {
+        return uowEgressContent;
+    }
+
+    public void setUowEgressContent(Set<String> uowEgressContent) {
+        this.uowEgressContent = uowEgressContent;
+    }
+
+    public UoWProcessingOutcomeEnum getUowProcessingOutcome() {
+        return uowProcessingOutcome;
+    }
+
+    public void setUowProcessingOutcome(UoWProcessingOutcomeEnum uowProcessingOutcome) {
+        this.uowProcessingOutcome = uowProcessingOutcome;
+    }
 }

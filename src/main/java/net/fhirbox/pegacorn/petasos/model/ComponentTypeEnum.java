@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2020 ACT Health (Mark A. Hunter).
@@ -25,36 +25,23 @@ package net.fhirbox.pegacorn.petasos.model;
 
 /**
  *
- * @author mhunter
+ * @author ACT Health (Mark A. Hunter)
  */
-public class ComponentIdentifier {
-    private String identifierType; // What is the type of identifier being used?
-    private String identifierValue; // What is the value of the identifier?
-    private ComponentTypeEnum componentType; // What is the type of Component?
-
-    public String getIdentifierType() {
-        return identifierType;
-    }
-
-    public void setIdentifierType(String identifierType) {
-        this.identifierType = identifierType;
-    }
-
-    public String getIdentifierValue() {
-        return identifierValue;
-    }
-
-    public void setIdentifierValue(String identifierValue) {
-        this.identifierValue = identifierValue;
-    }
-
-    public ComponentTypeEnum getComponentType() {
-        return componentType;
-    }
-
-    public void setComponentType(ComponentTypeEnum componentType) {
+public enum ComponentTypeEnum {
+    PEGACORN_DEPLOYMENT("pegacorn.deployment"),
+    PEGACORN_SYSTEM("pegacorn.system"),
+    PEGACORN_POD("pegacorn.pod"),
+    PEGACORN_MODULE("pegacorn.module"),
+    PEGACORN_WUP("pegacorn.work_unit_processor");
+    
+    private String componentType;
+    
+    private ComponentTypeEnum(String componentType ){
         this.componentType = componentType;
     }
     
+    public String getComponentType(){
+        return(this.componentType);
+    }
     
 }
