@@ -29,7 +29,7 @@ import java.util.Set;
  *
  * @author mhunter
  */
-public class UnitOfWork {
+public class UoW {
     private UoWIdentifier uowID;
     private Set<String> uowIngressContent; // JSON Objects
     private Set<String> uowEgressContent; // JSON Objects

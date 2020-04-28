@@ -21,18 +21,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package net.fhirbox.pegacorn.petasos.model;
+package net.fhirbox.pegacorn.petasos.agent;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
+import net.fhirbox.pegacorn.petasos.model.ComponentWatchdogStateEnum;
+import net.fhirbox.pegacorn.petasos.model.PetasosParcelRegistration;
+import net.fhirbox.pegacorn.petasos.model.PetasosWUPActionSuggestionEnum;
+import net.fhirbox.pegacorn.petasos.model.UoW;
+import net.fhirbox.pegacorn.petasos.model.UoWProcessingOutcomeEnum;
 
 /**
  *
  * @author ACT Health (Mark A. Hunter)
  */
-public class PetasosWUPWatchdogState {
-    private WorkUnitProcessorIdentifier wupID;
-    private ComponentWatchdogStateEnum wupStatus;
-    private Instant lastStatusUpdate;
+public interface PetasosWUPAgentInterface {
+    public PetasosParcelRegistration registerActivity(String wupID, UoW theUoW);
+    public PetasosWUPActionSuggestionEnum startActivity(String parcelID);
+    public PetasosWUPActionSuggestionEnum finishActivity(String parcelID, UoW theFinishedUoW, UoWProcessingOutcomeEnum theFinishedUoWOutcome);
+    public UoWProcessingOutcomeEnum finaliseActivity(String parcelID, UoW theFinishedUoW);
+    public PetasosWUPActionSuggestionEnum updateOperationalStatus( String wupID, Long presentInstant, ComponentWatchdogStateEnum presentState );
+    public PetasosWUPActionSuggestionEnum updateActivityStatus( String parcelID, Long presentInstant, ComponentWatchdogStateEnum presentState );
+    public PetasosWUPActionSuggestionEnum getPeerActivityStatus( String parcelID );
     
 }

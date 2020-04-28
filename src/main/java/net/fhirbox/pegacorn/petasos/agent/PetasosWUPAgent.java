@@ -27,6 +27,6 @@ package net.fhirbox.pegacorn.petasos.agent;
  *
  * @author mhunter
  */
-public class PetasosWUPAgent implements PetasosWUPInterface{
+public class PetasosWUPAgent implements PetasosWUPAgentInterface{
     
 }

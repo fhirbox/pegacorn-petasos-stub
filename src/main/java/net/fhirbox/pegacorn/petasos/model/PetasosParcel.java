@@ -31,7 +31,7 @@ import java.util.Set;
  */
 public class PetasosParcel {
     private PetasosParcelRegistration parcelRegistration;
-    private UnitOfWork actualUnitOfWork;
+    private UoW actualUnitOfWork;
     private Set<PetasosParcelIdentifier> successorParcels;
     private PetasosWUPWatchdogState taskProcessorState;
     private PetasosParcelIdentifier precursorParcel;

@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2020 ACT Health (Mark A. Hunter).
@@ -25,12 +25,20 @@ package net.fhirbox.pegacorn.petasos.model;
 
 /**
  *
- * @author mhunter
+ * @author ACT Health (Mark A. Hunter)
  */
-public class WUPIdentifier extends ComponentIdentifier {
-
-    public WUPIdentifier(){
-        super();
+public enum PetasosWUPActionSuggestionEnum {
+    WUP_ACTION_SUGGESTION_PAUSE("pegacorn.petasos.agent.wup.action.pause"),
+    WUP_ACTION_SUGGESTION_HALT("pegacorn.petasos.agent.wup.action.halt"),
+    WUP_ACTION_SUGGESTION_CONTINUE("pegacorn.petasos.agent.wup.action.continue");
+    
+    private String wupActionSuggestion;
+    
+    private PetasosWUPActionSuggestionEnum(String newWUPAgentSuggestion ){
+        this.wupActionSuggestion = newWUPAgentSuggestion;
     }
     
+    public String getPetasosWUPActionSuggestion(){
+        return(this.wupActionSuggestion);
+    }    
 }

@@ -21,12 +21,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package net.fhirbox.pegacorn.petasos.agent;
+package net.fhirbox.pegacorn.petasos.model;
 
 /**
  *
  * @author mhunter
  */
-public interface PetasosWUPInterface {
+public class WorkUnitProcessorIdentifier extends ComponentIdentifier {
+
+    public WorkUnitProcessorIdentifier(){
+        super();
+    }
     
 }
