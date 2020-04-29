@@ -63,13 +63,13 @@ public class PetasosParcel {
 	 * @return the successorParcels
 	 */
 	public Set<FDN> getSuccessorParcels() {
-		return successorParcels;
+		return successorParcelFDNs;
 	}
 	/**
 	 * @param successorParcels the successorParcels to set
 	 */
 	public void setSuccessorParcels(Set<FDN> successorParcels) {
-		this.successorParcels = successorParcels;
+		this.successorParcelFDNs = successorParcels;
 	}
 	/**
 	 * @return the taskProcessorState
@@ -87,13 +87,13 @@ public class PetasosParcel {
 	 * @return the precursorParcel
 	 */
 	public FDN getPrecursorParcel() {
-		return precursorParcel;
+		return precursorParcelFDN;
 	}
 	/**
 	 * @param precursorParcel the precursorParcel to set
 	 */
 	public void setPrecursorParcel(FDN precursorParcel) {
-		this.precursorParcel = precursorParcel;
+		this.precursorParcelFDN = precursorParcel;
 	}
      
 }
