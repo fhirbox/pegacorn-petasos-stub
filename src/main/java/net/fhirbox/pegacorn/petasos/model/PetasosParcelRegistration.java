@@ -34,4 +34,28 @@ public class PetasosParcelRegistration {
     private Instant parcelStateDate;
     private Instant pracelExpectedCompletionDate;
 
+    public PetasosParcelIdentifier getParcelID() {
+        return parcelID;
+    }
+
+    public void setParcelID(PetasosParcelIdentifier parcelID) {
+        this.parcelID = parcelID;
+    }
+
+    public Instant getParcelStateDate() {
+        return parcelStateDate;
+    }
+
+    public void setParcelStateDate(Instant parcelStateDate) {
+        this.parcelStateDate = parcelStateDate;
+    }
+
+    public Instant getPracelExpectedCompletionDate() {
+        return pracelExpectedCompletionDate;
+    }
+
+    public void setPracelExpectedCompletionDate(Instant pracelExpectedCompletionDate) {
+        this.pracelExpectedCompletionDate = pracelExpectedCompletionDate;
+    }
+
 }

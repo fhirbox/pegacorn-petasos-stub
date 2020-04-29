@@ -23,10 +23,29 @@
  */
 package net.fhirbox.pegacorn.petasos.agent;
 
+import java.time.LocalDateTime;
+import net.fhirbox.pegacorn.petasos.model.ComponentWatchdogStateEnum;
+import net.fhirbox.pegacorn.petasos.model.PetasosParcelIdentifier;
+import net.fhirbox.pegacorn.petasos.model.PetasosParcelRegistration;
+import net.fhirbox.pegacorn.petasos.model.PetasosWUPActionSuggestionEnum;
+import net.fhirbox.pegacorn.petasos.model.UoW;
+import net.fhirbox.pegacorn.petasos.model.UoWProcessingOutcomeEnum;
+
 /**
  *
  * @author mhunter
  */
 public class PetasosWUPAgent implements PetasosWUPAgentInterface{
-    
+    public PetasosParcelRegistration registerActivity(String wupID, UoW theUoW){
+        PetasosParcelRegistration newParcel = new PetasosParcelRegistration();
+        LocalDateTime currentTime = LocalDateTime.now();
+        PetasosParcelIdentifier newParcelID = new PetasosParcelIdentifier( wupID, theUoW.getUowID().getFDN(), Long.toString(currentTime.getNano())); 
+        return(newParcel);
+    }
+    public PetasosWUPActionSuggestionEnum startActivity(String parcelID);
+    public PetasosWUPActionSuggestionEnum finishActivity(String parcelID, UoW theFinishedUoW, UoWProcessingOutcomeEnum theFinishedUoWOutcome);
+    public UoWProcessingOutcomeEnum finaliseActivity(String parcelID, UoW theFinishedUoW);
+    public PetasosWUPActionSuggestionEnum updateOperationalStatus( String wupID, Long presentInstant, ComponentWatchdogStateEnum presentState );
+    public PetasosWUPActionSuggestionEnum updateActivityStatus( String parcelID, Long presentInstant, ComponentWatchdogStateEnum presentState );
+    public PetasosWUPActionSuggestionEnum getPeerActivityStatus( String parcelID );    
 }
