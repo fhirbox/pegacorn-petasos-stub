@@ -31,7 +31,7 @@ import java.time.LocalDateTime;
  * @author ACT Health (Mark A. Hunter)
  */
 public class PetasosWUPWatchdogState {
-    private WorkUnitProcessorIdentifier wupID;
+    private FDN wupFDN;
     private ComponentWatchdogStateEnum wupStatus;
     private Instant lastStatusUpdate;
     

@@ -30,8 +30,10 @@ import java.util.Set;
  * @author ACT Health (Mark A. Hunter)
  */
 public class ComponentInstance {
+    private FDN componentFDN;
+    private FDN componentTypeFDN;
     private ComponentInstanceCertificate ciRegistrationCertificate ;
-    private Set<ComponentIdentifier> containedComponents;
+    private Set<FDN> containedComponents;
     private ComponentInstanceStatus ciStatus;
     private Set<WorkUnitProcessor> enabledWUPSet;
 }

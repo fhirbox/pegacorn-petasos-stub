@@ -30,16 +30,16 @@ import java.time.Instant;
  * @author ACT Health (Mark A. Hunter)
  */
 public class PetasosParcelRegistration {
-    private PetasosParcelIdentifier parcelID;
+    private FDN parcelFDN;
     private Instant parcelStateDate;
     private Instant pracelExpectedCompletionDate;
 
-    public PetasosParcelIdentifier getParcelID() {
-        return parcelID;
+    public FDN getParcelFDN() {
+        return this.parcelFDN;
     }
 
-    public void setParcelID(PetasosParcelIdentifier parcelID) {
-        this.parcelID = parcelID;
+    public void setParcelFDN(FDN parcelFDN) {
+        this.parcelFDN = parcelFDN;
     }
 
     public Instant getParcelStateDate() {
