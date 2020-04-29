@@ -35,18 +35,18 @@ public class ComponentInstance {
     private Set<FDN> containedComponents;
     private ComponentInstanceStatus ciStatus;
     private Set<WorkUnitProcessor> enabledWUPSet;
-    private FDN componentFDN;
+    private FDN componentInstanceFDN;
     /**
-	 * @return the componentFDN
+	 * @return the componentInstanceFDN
 	 */
 	public FDN getComponentFDN() {
-		return componentFDN;
+		return componentInstanceFDN;
 	}
 	/**
-	 * @param componentFDN the componentFDN to set
+	 * @param componentInstanceFDN the componentInstanceFDN to set
 	 */
 	public void setComponentFDN(FDN componentFDN) {
-		this.componentFDN = componentFDN;
+		this.componentInstanceFDN = componentFDN;
 	}
 	/**
 	 * @return the componentTypeFDN
