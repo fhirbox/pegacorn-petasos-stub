@@ -32,8 +32,68 @@ import java.util.Set;
 public class PetasosParcel {
     private PetasosParcelRegistration parcelRegistration;
     private UoW actualUnitOfWork;
-    private Set<FDN> successorParcels;
+    private Set<FDN> successorParcelFDNs;
     private PetasosWUPWatchdogState taskProcessorState;
-    private FDN precursorParcel;
-    
+    private FDN precursorParcelFDN;
+	/**
+	 * @return the parcelRegistration
+	 */
+	public PetasosParcelRegistration getParcelRegistration() {
+		return parcelRegistration;
+	}
+	/**
+	 * @param parcelRegistration the parcelRegistration to set
+	 */
+	public void setParcelRegistration(PetasosParcelRegistration parcelRegistration) {
+		this.parcelRegistration = parcelRegistration;
+	}
+	/**
+	 * @return the actualUnitOfWork
+	 */
+	public UoW getActualUnitOfWork() {
+		return actualUnitOfWork;
+	}
+	/**
+	 * @param actualUnitOfWork the actualUnitOfWork to set
+	 */
+	public void setActualUnitOfWork(UoW actualUnitOfWork) {
+		this.actualUnitOfWork = actualUnitOfWork;
+	}
+	/**
+	 * @return the successorParcels
+	 */
+	public Set<FDN> getSuccessorParcels() {
+		return successorParcels;
+	}
+	/**
+	 * @param successorParcels the successorParcels to set
+	 */
+	public void setSuccessorParcels(Set<FDN> successorParcels) {
+		this.successorParcels = successorParcels;
+	}
+	/**
+	 * @return the taskProcessorState
+	 */
+	public PetasosWUPWatchdogState getTaskProcessorState() {
+		return taskProcessorState;
+	}
+	/**
+	 * @param taskProcessorState the taskProcessorState to set
+	 */
+	public void setTaskProcessorState(PetasosWUPWatchdogState taskProcessorState) {
+		this.taskProcessorState = taskProcessorState;
+	}
+	/**
+	 * @return the precursorParcel
+	 */
+	public FDN getPrecursorParcel() {
+		return precursorParcel;
+	}
+	/**
+	 * @param precursorParcel the precursorParcel to set
+	 */
+	public void setPrecursorParcel(FDN precursorParcel) {
+		this.precursorParcel = precursorParcel;
+	}
+     
 }

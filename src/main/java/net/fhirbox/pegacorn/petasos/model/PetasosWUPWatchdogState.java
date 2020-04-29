@@ -34,5 +34,41 @@ public class PetasosWUPWatchdogState {
     private FDN wupFDN;
     private ComponentWatchdogStateEnum wupStatus;
     private Instant lastStatusUpdate;
+	/**
+	 * @return the wupFDN
+	 */
+	public FDN getWupFDN() {
+		return wupFDN;
+	}
+	/**
+	 * @param wupFDN the wupFDN to set
+	 */
+	public void setWupFDN(FDN wupFDN) {
+		this.wupFDN = wupFDN;
+	}
+	/**
+	 * @return the wupStatus
+	 */
+	public ComponentWatchdogStateEnum getWupStatus() {
+		return wupStatus;
+	}
+	/**
+	 * @param wupStatus the wupStatus to set
+	 */
+	public void setWupStatus(ComponentWatchdogStateEnum wupStatus) {
+		this.wupStatus = wupStatus;
+	}
+	/**
+	 * @return the lastStatusUpdate
+	 */
+	public Instant getLastStatusUpdate() {
+		return lastStatusUpdate;
+	}
+	/**
+	 * @param lastStatusUpdate the lastStatusUpdate to set
+	 */
+	public void setLastStatusUpdate(Instant lastStatusUpdate) {
+		this.lastStatusUpdate = lastStatusUpdate;
+	}
     
 }
