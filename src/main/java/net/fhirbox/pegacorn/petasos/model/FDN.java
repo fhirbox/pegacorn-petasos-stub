@@ -23,7 +23,8 @@
  */
 package net.fhirbox.pegacorn.petasos.model;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.ListIterator;
 
 /**
@@ -32,22 +33,26 @@ import java.util.ListIterator;
  */
 public class FDN 
 {
-    private java.util.Vector<RDN> rdnElementSet;
+    private java.util.ArrayList<RDN> rdnElementSet;
     
     public static String RDN_ENTRY_SEPERATOR = ".";
 
     public FDN() 
     {
-        rdnElementSet = new Vector<RDN>();
+        rdnElementSet = new ArrayList<RDN>();
     }
     
-    public FDN(Vector<RDN> rdnElement) 
+    public FDN(Collection<RDN> originalElementSet) 
     {
-        this.rdnElementSet = rdnElement;
+        this.rdnElementSet = new ArrayList<>(originalElementSet);
+    }
+    
+    public FDN(FDN originalFDN) {
+    	this.rdnElementSet = new ArrayList<>(originalFDN.rdnElementSet);
     }
     
     public FDN( String qualifiedFDN ){
-        rdnElementSet = new Vector<RDN>();
+        rdnElementSet = new ArrayList<RDN>();
         populateFDN(qualifiedFDN);
     }
 

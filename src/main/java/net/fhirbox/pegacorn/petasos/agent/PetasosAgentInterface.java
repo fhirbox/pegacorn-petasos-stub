@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2020 ACT Health (Mark A. Hunter).
@@ -23,9 +23,11 @@
  */
 package net.fhirbox.pegacorn.petasos.agent;
 
-import java.time.LocalDateTime;
-import net.fhirbox.pegacorn.petasos.model.ComponentWatchdogStateEnum;
-import net.fhirbox.pegacorn.petasos.model.PetasosParcelIdentifier;
+import java.util.Collection;
+
+import net.fhirbox.pegacorn.petasos.model.ComponentStatusEnum;
+import net.fhirbox.pegacorn.petasos.model.FDN;
+import net.fhirbox.pegacorn.petasos.model.PetasosParcel;
 import net.fhirbox.pegacorn.petasos.model.PetasosParcelRegistration;
 import net.fhirbox.pegacorn.petasos.model.PetasosWUPActionSuggestionEnum;
 import net.fhirbox.pegacorn.petasos.model.UoW;
@@ -33,19 +35,16 @@ import net.fhirbox.pegacorn.petasos.model.UoWProcessingOutcomeEnum;
 
 /**
  *
- * @author mhunter
+ * @author ACT Health (Mark A. Hunter)
  */
-public class PetasosWUPAgent implements PetasosWUPAgentInterface{
-    public PetasosParcelRegistration registerActivity(String wupID, UoW theUoW){
-        PetasosParcelRegistration newParcel = new PetasosParcelRegistration();
-        LocalDateTime currentTime = LocalDateTime.now();
-        PetasosParcelIdentifier newParcelID = new PetasosParcelIdentifier( wupID, theUoW.getUowID().getFDN(), Long.toString(currentTime.getNano())); 
-        return(newParcel);
-    }
-    public PetasosWUPActionSuggestionEnum startActivity(String parcelID);
-    public PetasosWUPActionSuggestionEnum finishActivity(String parcelID, UoW theFinishedUoW, UoWProcessingOutcomeEnum theFinishedUoWOutcome);
-    public UoWProcessingOutcomeEnum finaliseActivity(String parcelID, UoW theFinishedUoW);
-    public PetasosWUPActionSuggestionEnum updateOperationalStatus( String wupID, Long presentInstant, ComponentWatchdogStateEnum presentState );
-    public PetasosWUPActionSuggestionEnum updateActivityStatus( String parcelID, Long presentInstant, ComponentWatchdogStateEnum presentState );
-    public PetasosWUPActionSuggestionEnum getPeerActivityStatus( String parcelID );    
+public interface PetasosAgentInterface {
+	public void registerWorkUnitProcessor( FDN myProcessorFDN, FDN mySupportedFunctionFDN );
+    public PetasosParcel registerActivity(FDN myWUPFDN, FDN myComponentFunctionFDN, UoW theUoW, FDN precursorParcelFDN);
+    public PetasosWUPActionSuggestionEnum startActivity(FDN parcelFDN);
+    public PetasosWUPActionSuggestionEnum finishActivity(FDN parcelFDN, UoW theFinishedUoW, UoWProcessingOutcomeEnum theFinishedUoWOutcome);
+    public UoWProcessingOutcomeEnum finaliseActivity(FDN parcelFDN, UoW theFinishedUoW);
+    public PetasosWUPActionSuggestionEnum updateOperationalStatus( FDN wupFDN, Long presentInstant, ComponentStatusEnum presentState );
+    public PetasosWUPActionSuggestionEnum updateActivityStatus( FDN parcelFDN, Long presentInstant, ComponentStatusEnum presentState );
+    public PetasosWUPActionSuggestionEnum getPeerActivityStatus( FDN parcelFDN );
+    public Collection<PetasosParcel> getRelevantParcels(FDN myWUPFDN, FDN myComponentFunctionFDN );
 }

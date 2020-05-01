@@ -32,7 +32,7 @@ import java.time.LocalDateTime;
  */
 public class PetasosWUPWatchdogState {
     private FDN wupFDN;
-    private ComponentWatchdogStateEnum wupStatus;
+    private ComponentStatusEnum wupStatus;
     private Instant lastStatusUpdate;
 	/**
 	 * @return the wupFDN
@@ -49,13 +49,13 @@ public class PetasosWUPWatchdogState {
 	/**
 	 * @return the wupStatus
 	 */
-	public ComponentWatchdogStateEnum getWupStatus() {
+	public ComponentStatusEnum getWupStatus() {
 		return wupStatus;
 	}
 	/**
 	 * @param wupStatus the wupStatus to set
 	 */
-	public void setWupStatus(ComponentWatchdogStateEnum wupStatus) {
+	public void setWupStatus(ComponentStatusEnum wupStatus) {
 		this.wupStatus = wupStatus;
 	}
 	/**

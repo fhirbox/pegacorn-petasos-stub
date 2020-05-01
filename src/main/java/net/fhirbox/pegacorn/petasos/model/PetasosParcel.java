@@ -23,7 +23,8 @@
  */
 package net.fhirbox.pegacorn.petasos.model;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  *
@@ -31,10 +32,28 @@ import java.util.Set;
  */
 public class PetasosParcel {
     private PetasosParcelRegistration parcelRegistration;
-    private UoW actualUnitOfWork;
-    private Set<FDN> successorParcelFDNs;
+    private UoW containedUoW;
+    private ArrayList<FDN> successorParcelSet;
     private PetasosWUPWatchdogState taskProcessorState;
     private FDN precursorParcelFDN;
+    
+    public PetasosParcel(PetasosParcelRegistration theParcelRegistration, UoW theUoW, FDN thePrecursorFDN, PetasosWUPWatchdogState theWUPStatus) {
+    	this.parcelRegistration = theParcelRegistration;
+    	this.containedUoW = theUoW;
+    	this.successorParcelSet = new ArrayList<>();
+    	this.precursorParcelFDN = new FDN(thePrecursorFDN);
+    	this.taskProcessorState = theWUPStatus;
+    }
+    
+    public PetasosParcel( PetasosParcel originalParcel) {
+    	this.parcelRegistration = new PetasosParcelRegistration(originalParcel.getParcelRegistration());
+    	this.containedUoW = new UoW(originalParcel.getContainedUoW());
+    	this.successorParcelSet = new ArrayList<>();
+    	this.successorParcelSet.addAll(originalParcel.getSuccessorParcelSet());
+    	this.taskProcessorState = originalParcel.getTaskProcessorState();
+    	this.precursorParcelFDN = new FDN(originalParcel.getPrecursorParcel());
+    }
+    
 	/**
 	 * @return the parcelRegistration
 	 */
@@ -48,28 +67,29 @@ public class PetasosParcel {
 		this.parcelRegistration = parcelRegistration;
 	}
 	/**
-	 * @return the actualUnitOfWork
+	 * @return the containedUoW
 	 */
-	public UoW getActualUnitOfWork() {
-		return actualUnitOfWork;
+	public UoW getContainedUoW() {
+		return containedUoW;
 	}
 	/**
-	 * @param actualUnitOfWork the actualUnitOfWork to set
+	 * @param containedUoW the containedUoW to set
 	 */
-	public void setActualUnitOfWork(UoW actualUnitOfWork) {
-		this.actualUnitOfWork = actualUnitOfWork;
+	public void setContainedUoW(UoW actualUnitOfWork) {
+		this.containedUoW = new UoW(actualUnitOfWork);
 	}
 	/**
 	 * @return the successorParcels
 	 */
-	public Set<FDN> getSuccessorParcels() {
-		return successorParcelFDNs;
+	public Collection<FDN> getSuccessorParcelSet() {
+		return successorParcelSet;
 	}
 	/**
 	 * @param successorParcels the successorParcels to set
 	 */
-	public void setSuccessorParcels(Set<FDN> successorParcels) {
-		this.successorParcelFDNs = successorParcels;
+	public void setSuccessorParcels(Collection<FDN> successorParcels) {
+		this.successorParcelSet.clear();
+		this.successorParcelSet.addAll(successorParcels);
 	}
 	/**
 	 * @return the taskProcessorState
@@ -95,5 +115,6 @@ public class PetasosParcel {
 	public void setPrecursorParcel(FDN precursorParcel) {
 		this.precursorParcelFDN = precursorParcel;
 	}
+
      
 }

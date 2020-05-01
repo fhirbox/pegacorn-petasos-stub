@@ -31,19 +31,19 @@ import java.time.Instant;
  */
 public class ComponentInstanceStatus {
 
-        private ComponentWatchdogStateEnum componentStatus; 
+        private ComponentStatusEnum componentStatus; 
         private Instant lastCheck;
         private Instant expectedComponentEndDate;
 		/**
 		 * @return the componentStatus
 		 */
-		public ComponentWatchdogStateEnum getComponentStatus() {
+		public ComponentStatusEnum getComponentStatus() {
 			return componentStatus;
 		}
 		/**
 		 * @param componentStatus the componentStatus to set
 		 */
-		public void setComponentStatus(ComponentWatchdogStateEnum componentStatus) {
+		public void setComponentStatus(ComponentStatusEnum componentStatus) {
 			this.componentStatus = componentStatus;
 		}
 		/**
