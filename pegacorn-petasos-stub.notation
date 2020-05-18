@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_VdpeAItFEeqS39pfhQazug" type="PapyrusUMLClassDiagram" name="PetasosInfoModel" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_l6ttYItFEeqS39pfhQazug" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_l6uUcItFEeqS39pfhQazug" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_l6uUcYtFEeqS39pfhQazug" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_l6uUcotFEeqS39pfhQazug" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_l6uUc4tFEeqS39pfhQazug" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_oe3sMItFEeqS39pfhQazug" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="pegacorn-petasos-stub.uml#_l59fcItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe3sMYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe4TQItFEeqS39pfhQazug" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="pegacorn-petasos-stub.uml#_l5_UoItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe4TQYtFEeqS39pfhQazug"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_l6uUdItFEeqS39pfhQazug"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_l6uUdYtFEeqS39pfhQazug"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_l6uUdotFEeqS39pfhQazug"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l6uUd4tFEeqS39pfhQazug"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_l6u7gItFEeqS39pfhQazug" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_oe4TQotFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6BJ0ItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe4TQ4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe46UItFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6HQcItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe46UYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe46UotFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6OlMItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe46U4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe5hYItFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6TdsItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe5hYYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe5hYotFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6aycItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe5hY4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe6IcItFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6fq8ItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe6IcYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe6IcotFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6jVUItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe6Ic4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe6vgItFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6lxkItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe6vgYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe6vgotFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6o04ItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe6vg4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe6vhItFEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_l6rRIItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe6vhYtFEeqS39pfhQazug"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_l6u7gYtFEeqS39pfhQazug"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_l6u7gotFEeqS39pfhQazug"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_l6u7g4tFEeqS39pfhQazug"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l6u7hItFEeqS39pfhQazug"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_l6u7hYtFEeqS39pfhQazug" type="Class_NestedClassifierCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_oe7WkItFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6FbQItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe7WkYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe7WkotFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6N-IItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe7Wk4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe7WlItFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6S2oYtFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe7WlYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe7WlotFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6aLYItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe7Wl4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe79oItFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6d1wItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe79oYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe79ootFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6hgIItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe79o4tFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe79pItFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6lKgItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe79pYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe8ksItFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6oN0ItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe8ksYtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe9y0ItFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6qDAItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe9y0YtFEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oe-Z4ItFEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_l6sfQItFEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oe-Z4YtFEeqS39pfhQazug"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_l6u7hotFEeqS39pfhQazug"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_l6u7h4tFEeqS39pfhQazug"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_l6u7iItFEeqS39pfhQazug"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l6u7iYtFEeqS39pfhQazug"/>
+    </children>
+    <element xmi:type="uml:Class" href="pegacorn-petasos-stub.uml#_l4-oAItFEeqS39pfhQazug"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l6ttYYtFEeqS39pfhQazug" x="940" y="80"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_KjAf8ItGEeqS39pfhQazug" type="Class_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_KjIbwItGEeqS39pfhQazug" type="Class_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_KjIbwYtGEeqS39pfhQazug" type="Class_FloatingNameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_KjIbwotGEeqS39pfhQazug" y="15"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_KjIbw4tGEeqS39pfhQazug" type="Class_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_NtcboItGEeqS39pfhQazug" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="pegacorn-petasos-stub.uml#_KisW4ItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NtcboYtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NtdCsItGEeqS39pfhQazug" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="pegacorn-petasos-stub.uml#_KitlAItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NtdCsYtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NtdCsotGEeqS39pfhQazug" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="pegacorn-petasos-stub.uml#_KiuMEItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NtdCs4tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NtdCtItGEeqS39pfhQazug" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="pegacorn-petasos-stub.uml#_KiuzIItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NtdCtYtGEeqS39pfhQazug"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_KjIbxItGEeqS39pfhQazug"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_KjIbxYtGEeqS39pfhQazug"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_KjIbxotGEeqS39pfhQazug"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KjIbx4tGEeqS39pfhQazug"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_KjJC0ItGEeqS39pfhQazug" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_NtdCtotGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_KiwBQItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NtdCt4tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NtdpwItGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_Ki2H4ItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NtdpwYtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NtdpwotGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_Ki5LMItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ntdpw4tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NtdpxItGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_Ki6ZUItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NtdpxYtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NtdpxotGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_Ki7AYYtGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ntdpx4tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NteQ0ItGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_Ki8OgItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NteQ0YtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NteQ0otGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_Ki81kYtGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NteQ04tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NteQ1ItGEeqS39pfhQazug" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="pegacorn-petasos-stub.uml#_Ki-DsItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NteQ1YtGEeqS39pfhQazug"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_KjJC0YtGEeqS39pfhQazug"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_KjJC0otGEeqS39pfhQazug"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_KjJC04tGEeqS39pfhQazug"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KjJC1ItGEeqS39pfhQazug"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_KjJC1YtGEeqS39pfhQazug" type="Class_NestedClassifierCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_NteQ1otGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki1g0ItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NteQ14tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Nte34ItGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki4kIYtGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nte34YtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Nte34otGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki5yQItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nte344tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Nte35ItGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki7AYItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nte35YtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Nte35otGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki7ncItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Nte354tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Ntfe8ItGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki81kItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ntfe8YtGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Ntfe8otGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki9coYtGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ntfe84tGEeqS39pfhQazug"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_Ntfe9ItGEeqS39pfhQazug" type="Class_ClassNestedClassifierLabel">
+        <element xmi:type="uml:OpaqueBehavior" href="pegacorn-petasos-stub.uml#_Ki_R0ItGEeqS39pfhQazug"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ntfe9YtGEeqS39pfhQazug"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_KjJC1otGEeqS39pfhQazug"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_KjJC14tGEeqS39pfhQazug"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_KjJC2ItGEeqS39pfhQazug"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KjJC2YtGEeqS39pfhQazug"/>
+    </children>
+    <element xmi:type="uml:Class" href="pegacorn-petasos-stub.uml#_KgLOYItGEeqS39pfhQazug"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KjAf8YtGEeqS39pfhQazug" x="160" y="80"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_VdpeAYtFEeqS39pfhQazug" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_VdpeAotFEeqS39pfhQazug"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_VdpeA4tFEeqS39pfhQazug" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+    <owner xmi:type="uml:Package" href="pegacorn-petasos-stub.uml#_Q7EgIItEEeqS39pfhQazug"/>
+  </styles>
+  <element xmi:type="uml:Package" href="pegacorn-petasos-stub.uml#_Q7EgIItEEeqS39pfhQazug"/>
+</notation:Diagram>

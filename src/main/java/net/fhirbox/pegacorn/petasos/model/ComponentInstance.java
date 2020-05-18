@@ -23,6 +23,7 @@
  */
 package net.fhirbox.pegacorn.petasos.model;
 
+import net.fhirbox.pegacorn.petasos.wup.processorframework.DefaultCamelWorkUnitProcessor;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.ArrayList;
@@ -31,76 +32,96 @@ import java.util.ArrayList;
  *
  * @author ACT Health (Mark A. Hunter)
  */
-public class ComponentInstance {
-	private ArrayList<FDN> supportedFunctionSet;
+public class ComponentInstance
+{
+
+    private ArrayList<FDN> supportedFunctionSet;
     private ArrayList<ComponentInstance> containedComponents;
-    private ArrayList<WorkUnitProcessor> enabledWUPSet;
+    private ArrayList<DefaultCamelWorkUnitProcessor> enabledWUPSet;
     private FDN componentFDN;
-    private ComponentInstanceStatus componentStatus; 
-    
+    private ComponentInstanceStatus componentStatus;
 
     /**
-	 * @return the componentInstanceFDN
-	 */
-	public FDN getComponentFDN() {
-		return componentFDN;
-	}
-	/**
-	 * @param componentInstanceFDN the componentInstanceFDN to set
-	 */
-	public void setComponentFDN(FDN componentFDN) {
-		this.componentFDN = componentFDN;
-	}
-	/**
-	 * @return the supportedFunctionSet
-	 */
-	public Collection<FDN> getSupportedFunctionSet() {
-		return supportedFunctionSet;
-	}
-	/**
-	 * @param supportedFunctionSet the supportedFunctionSet to set
-	 */
-	public void setSupportedFunctionSet(Collection<FDN> newSupportedFunctionSet) {
-		this.supportedFunctionSet.clear();
-		this.supportedFunctionSet.addAll(newSupportedFunctionSet);
-	}
-	/**
-	 * @return the containedComponents
-	 */
-	public Collection<ComponentInstance> getContainedComponents() {
-		return containedComponents;
-	}
-	/**
-	 * @param containedComponents the containedComponents to set
-	 */
-	public void setContainedComponents(Collection<ComponentInstance> containedComponents) {
-		this.containedComponents.clear();
-		this.containedComponents.addAll(containedComponents);
-	}
-	/**
-	 * @return the componentStatus
-	 */
-	public ComponentInstanceStatus getComponentStatus() {
-		return componentStatus;
-	}
-	/**
-	 * @param componentStatus the componentStatus to set
-	 */
-	public void setComponentStatus(ComponentInstanceStatus ciStatus) {
-		this.componentStatus = ciStatus;
-	}
-	/**
-	 * @return the enabledWUPSet
-	 */
-	public Collection<WorkUnitProcessor> getEnabledWUPSet() {
-		return enabledWUPSet;
-	}
-	/**
-	 * @param enabledWUPSet the enabledWUPSet to set
-	 */
-	public void setEnabledWUPSet(Collection<WorkUnitProcessor> enabledWUPSet) {
-		this.enabledWUPSet.clear();
-		this.enabledWUPSet.addAll(enabledWUPSet);
-	}
+     * @return the componentInstanceFDN
+     */
+    public FDN getComponentFDN()
+    {
+        return componentFDN;
+    }
+
+    /**
+     * @param componentInstanceFDN the componentInstanceFDN to set
+     */
+    public void setComponentFDN(FDN componentFDN)
+    {
+        this.componentFDN = componentFDN;
+    }
+
+    /**
+     * @return the supportedFunctionSet
+     */
+    public Collection<FDN> getSupportedFunctionSet()
+    {
+        return supportedFunctionSet;
+    }
+
+    /**
+     * @param supportedFunctionSet the supportedFunctionSet to set
+     */
+    public void setSupportedFunctionSet(Collection<FDN> newSupportedFunctionSet)
+    {
+        this.supportedFunctionSet.clear();
+        this.supportedFunctionSet.addAll(newSupportedFunctionSet);
+    }
+
+    /**
+     * @return the containedComponents
+     */
+    public Collection<ComponentInstance> getContainedComponents()
+    {
+        return containedComponents;
+    }
+
+    /**
+     * @param containedComponents the containedComponents to set
+     */
+    public void setContainedComponents(Collection<ComponentInstance> containedComponents)
+    {
+        this.containedComponents.clear();
+        this.containedComponents.addAll(containedComponents);
+    }
+
+    /**
+     * @return the componentStatus
+     */
+    public ComponentInstanceStatus getComponentStatus()
+    {
+        return componentStatus;
+    }
+
+    /**
+     * @param componentStatus the componentStatus to set
+     */
+    public void setComponentStatus(ComponentInstanceStatus ciStatus)
+    {
+        this.componentStatus = ciStatus;
+    }
+
+    /**
+     * @return the enabledWUPSet
+     */
+    public Collection<DefaultCamelWorkUnitProcessor> getEnabledWUPSet()
+    {
+        return enabledWUPSet;
+    }
+
+    /**
+     * @param enabledWUPSet the enabledWUPSet to set
+     */
+    public void setEnabledWUPSet(Collection<DefaultCamelWorkUnitProcessor> enabledWUPSet)
+    {
+        this.enabledWUPSet.clear();
+        this.enabledWUPSet.addAll(enabledWUPSet);
+    }
 
 }

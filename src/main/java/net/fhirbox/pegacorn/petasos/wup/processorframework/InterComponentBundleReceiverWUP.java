@@ -1,7 +1,7 @@
-/* 
+/*
  * The MIT License
  *
- * Copyright 2020 ACT Health (Mark A. Hunter).
+ * Copyright 2020 Mark A. Hunter (ACT Health).
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,16 +21,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package net.fhirbox.pegacorn.petasos.model;
+package net.fhirbox.pegacorn.petasos.wup.processorframework;
+
+import net.fhirbox.pegacorn.petasos.model.FDN;
+import net.fhirbox.pegacorn.petasos.model.PetasosParcelBundle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author mhunter
+ * @author Mark A. Hunter (ACT Health)
  */
-public class WorkUnitProcessorIdentifier extends ComponentIdentifier {
+public class InterComponentBundleReceiverWUP
+{
+    private static final Logger LOG = LoggerFactory.getLogger(InterComponentBundleReceiverWUP.class);
 
-    public WorkUnitProcessorIdentifier(){
-        super();
+    InterComponentBundleReceiverWUP(FDN parentComponentFDN, FDN functionFDN, String ingressMessagePoint, String targetMessageQueue)
+    {
+        LOG.debug("BundleReceiverSideWUP(): Constructor");
     }
     
+    public PetasosParcelBundle receivePetasosParcelBundle(){
+        LOG.debug("receivePetasosParcelBundle(): Entry, looking to receive a PetasosParcelBundle");
+        DefaultPetasosParcelBundle receivedParcel = new DefaultPetasosParcelBundle();
+        
+        return(receivedParcel);
+    }
 }

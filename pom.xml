@@ -41,4 +41,19 @@ THE SOFTWARE.
     <properties>
         <netbeans.hint.license>mit</netbeans.hint.license>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>net.fhirbox.pegacorn</groupId>
+            <artifactId>pegacorn-common</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.fhirbox.pegacorn</groupId>
+            <artifactId>pegacorn-fhir-r4-model</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

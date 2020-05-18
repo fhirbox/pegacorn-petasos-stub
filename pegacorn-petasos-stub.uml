@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JNmeIItEEeqS39pfhQazug" name="pegacorn-petasos-stub">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_JU5Y8ItEEeqS39pfhQazug">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Q2kaoItEEeqS39pfhQazug" name="pegacorn-petasos-stub">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Q7A1wItEEeqS39pfhQazug" name="net">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Q7Cq8ItEEeqS39pfhQazug" name="fhirbox">
+          <packagedElement xmi:type="uml:Package" xmi:id="_Q7Cq8YtEEeqS39pfhQazug" name="pegacorn">
+            <packagedElement xmi:type="uml:Package" xmi:id="_Q7DSAItEEeqS39pfhQazug" name="petasos">
+              <packagedElement xmi:type="uml:Package" xmi:id="_Q7EgIItEEeqS39pfhQazug" name="model">
+                <packagedElement xmi:type="uml:Class" xmi:id="_l4-oAItFEeqS39pfhQazug" name="FDN" visibility="public">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_l59fcItFEeqS39pfhQazug" name="rdnElementSet" visibility="private" type="_KgLOYItGEeqS39pfhQazug" isUnique="false" aggregation="composite">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l5-GgItFEeqS39pfhQazug"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l5-tkItFEeqS39pfhQazug" value="*"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_l5_UoItFEeqS39pfhQazug" name="RDN_ENTRY_SEPERATOR" visibility="public" isStatic="true" type="_RA73kYtEEeqS39pfhQazug" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_l6AiwItFEeqS39pfhQazug" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>&quot;.&quot;</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6FbQItFEeqS39pfhQazug" name="FDN" specification="_l6BJ0ItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    rdnElementSet = new ArrayList&lt;RDN>();
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6N-IItFEeqS39pfhQazug" name="FDN" specification="_l6HQcItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    this.rdnElementSet = new ArrayList&lt;>(originalElementSet);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6S2oYtFEeqS39pfhQazug" name="FDN" specification="_l6OlMItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    this.rdnElementSet = new ArrayList&lt;>(originalFDN.rdnElementSet);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6aLYItFEeqS39pfhQazug" name="FDN" specification="_l6TdsItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    rdnElementSet = new ArrayList&lt;RDN>();
+    populateFDN(qualifiedFDN);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6d1wItFEeqS39pfhQazug" name="appendRDN" specification="_l6aycItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    rdnElementSet.add(rdnElementSet.size(), pRDN);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6hgIItFEeqS39pfhQazug" name="populateFDN" specification="_l6fq8ItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    if (qualifiedFDN == null) {
+        return;
+    }
+    if (qualifiedFDN.isEmpty()) {
+        return;
+    }
+    String[] qualifiedElements = qualifiedFDN.split(this.RDN_ENTRY_SEPERATOR);
+    if (qualifiedElements.length &lt; 1) {
+        return;
+    }
+    for (int counter = 0; counter &lt; qualifiedElements.length; counter += 1) {
+        RDN newRDNElement = new RDN(qualifiedElements[counter]);
+        rdnElementSet.add(counter, newRDNElement);
+    }
+    return;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6lKgItFEeqS39pfhQazug" name="getUnqualifiedFDN" specification="_l6jVUItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    String lShortFDN = new String();
+    if (!rdnElementSet.isEmpty()) {
+        ListIterator&lt;RDN> rdnIterator = rdnElementSet.listIterator();
+        while (rdnIterator.hasNext()) {
+            lShortFDN += rdnIterator.next().getTypeValue();
+            if (rdnIterator.hasNext()) {
+                lShortFDN += new String(&quot;.&quot;);
+            }
+        }
+    }
+    return (lShortFDN);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6oN0ItFEeqS39pfhQazug" name="getComprehensiveFDN" specification="_l6lxkItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    String lShortFDN = new String();
+    Integer lCount = 0;
+    if (!rdnElementSet.isEmpty()) {
+        ListIterator&lt;RDN> rdnIterator = rdnElementSet.listIterator();
+        while (rdnIterator.hasNext()) {
+            RDN lRDN = rdnIterator.next();
+            lShortFDN += new String(&quot;[&quot;);
+            lShortFDN += lCount.toString();
+            lShortFDN += new String(&quot;]:&quot;);
+            lShortFDN += lRDN.getTypeName();
+            lShortFDN += new String(&quot;=&quot;);
+            lShortFDN += lRDN.getTypeValue();
+            if (rdnIterator.hasNext()) {
+                lShortFDN += new String(&quot;.&quot;);
+            }
+            lCount += 1;
+        }
+    }
+    return (lShortFDN);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6qDAItFEeqS39pfhQazug" name="getQualifiedFDN" specification="_l6o04ItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    String lShortFDN = new String();
+    if (!rdnElementSet.isEmpty()) {
+        ListIterator&lt;RDN> rdnIterator = rdnElementSet.listIterator();
+        while (rdnIterator.hasNext()) {
+            RDN lRDN = rdnIterator.next();
+            lShortFDN += lRDN.getTypeName();
+            lShortFDN += new String(&quot;=&quot;);
+            lShortFDN += lRDN.getTypeValue();
+            if (rdnIterator.hasNext()) {
+                lShortFDN += new String(&quot;.&quot;);
+            }
+        }
+    }
+    return (lShortFDN);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l6sfQItFEeqS39pfhQazug" name="toString" specification="_l6rRIItFEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    return (getQualifiedFDN());
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6BJ0ItFEeqS39pfhQazug" name="FDN" visibility="public" method="_l6FbQItFEeqS39pfhQazug"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6HQcItFEeqS39pfhQazug" name="FDN" visibility="public" method="_l6N-IItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6NXEItFEeqS39pfhQazug" name="originalElementSet">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l6NXEYtFEeqS39pfhQazug"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l6NXEotFEeqS39pfhQazug" value="*"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6OlMItFEeqS39pfhQazug" name="FDN" visibility="public" method="_l6S2oYtFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6S2oItFEeqS39pfhQazug" name="originalFDN" type="_l4-oAItFEeqS39pfhQazug"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6TdsItFEeqS39pfhQazug" name="FDN" visibility="public" method="_l6aLYItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6ZkUItFEeqS39pfhQazug" name="qualifiedFDN" type="_RA73kYtEEeqS39pfhQazug"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6aycItFEeqS39pfhQazug" name="appendRDN" visibility="public" method="_l6d1wItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6bZgItFEeqS39pfhQazug" name="pRDN"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6fq8ItFEeqS39pfhQazug" name="populateFDN" visibility="public" method="_l6hgIItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6g5EItFEeqS39pfhQazug" name="qualifiedFDN" type="_RA73kYtEEeqS39pfhQazug"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6jVUItFEeqS39pfhQazug" name="getUnqualifiedFDN" visibility="private" method="_l6lKgItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6kjcItFEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6lxkItFEeqS39pfhQazug" name="getComprehensiveFDN" visibility="private" method="_l6oN0ItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6m_sItFEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6o04ItFEeqS39pfhQazug" name="getQualifiedFDN" visibility="private" method="_l6qDAItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6pb8ItFEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_l6rRIItFEeqS39pfhQazug" name="toString" visibility="public" method="_l6sfQItFEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_l6r4MItFEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_KgLOYItGEeqS39pfhQazug" name="RDN" visibility="public">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_KisW4ItGEeqS39pfhQazug" name="nameType" visibility="private" type="_RA73kYtEEeqS39pfhQazug" isUnique="false"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_KitlAItGEeqS39pfhQazug" name="nameValue" visibility="private" type="_RA73kYtEEeqS39pfhQazug" isUnique="false"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_KiuMEItGEeqS39pfhQazug" name="BAD_NAME_VALUE" visibility="public" type="_RA73kYtEEeqS39pfhQazug" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_KiuMEYtGEeqS39pfhQazug" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>&quot;ERROR_BAD_NAME_VALUE&quot;</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_KiuzIItGEeqS39pfhQazug" name="BAD_NAME_TYPE" visibility="public" type="_RA73kYtEEeqS39pfhQazug" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_KivaMItGEeqS39pfhQazug" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>&quot;ERROR_BAD_NAME_TYPE&quot;</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki1g0ItGEeqS39pfhQazug" name="RDN" specification="_KiwBQItGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    this.nameType = nmType;
+    this.nameValue = value;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki4kIYtGEeqS39pfhQazug" name="RDN" specification="_Ki2H4ItGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    // String of type &quot;type=value&quot;
+    if (qualifiedRDNName == null) {
+        this.nameType = this.BAD_NAME_TYPE;
+        this.nameValue = this.BAD_NAME_VALUE;
+        return;
+    }
+    if (qualifiedRDNName.isEmpty()) {
+        this.nameType = this.BAD_NAME_TYPE;
+        ;
+        this.nameValue = this.BAD_NAME_VALUE;
+        return;
+    }
+    String[] namePair = qualifiedRDNName.split(&quot;=&quot;);
+    if (namePair.length > 2) {
+        this.nameType = this.BAD_NAME_TYPE;
+        ;
+        this.nameValue = this.BAD_NAME_VALUE;
+        return;
+    }
+    this.nameType = namePair[0];
+    this.nameValue = namePair[1];
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki5yQItGEeqS39pfhQazug" name="getTypeName" specification="_Ki5LMItGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    return nameType;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki7AYItGEeqS39pfhQazug" name="setTypeName" specification="_Ki6ZUItGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    this.nameType = name;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki7ncItGEeqS39pfhQazug" name="getTypeValue" specification="_Ki7AYYtGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    return nameValue;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki81kItGEeqS39pfhQazug" name="setTypeValue" specification="_Ki8OgItGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    this.nameValue = value;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki9coYtGEeqS39pfhQazug" name="toString" specification="_Ki81kYtGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    return (nameType + &quot;=&quot; + nameValue);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ki_R0ItGEeqS39pfhQazug" name="toRDNDescription" specification="_Ki-DsItGEeqS39pfhQazug">
+                    <language>JAVA</language>
+                    <body>
+    return (&quot;RDN:&quot; + nameType + &quot;=&quot; + nameValue);
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_KiwBQItGEeqS39pfhQazug" name="RDN" visibility="public" method="_Ki1g0ItGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki0SsItGEeqS39pfhQazug" name="nmType" type="_RA73kYtEEeqS39pfhQazug"/>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki05wItGEeqS39pfhQazug" name="value" type="_RA73kYtEEeqS39pfhQazug"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ki2H4ItGEeqS39pfhQazug" name="RDN" visibility="public" method="_Ki4kIYtGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki4kIItGEeqS39pfhQazug" name="qualifiedRDNName" type="_RA73kYtEEeqS39pfhQazug"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ki5LMItGEeqS39pfhQazug" name="getTypeName" visibility="public" method="_Ki5yQItGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki5LMYtGEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ki6ZUItGEeqS39pfhQazug" name="setTypeName" visibility="public" method="_Ki7AYItGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki6ZUYtGEeqS39pfhQazug" name="name" type="_RA73kYtEEeqS39pfhQazug"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ki7AYYtGEeqS39pfhQazug" name="getTypeValue" visibility="public" method="_Ki7ncItGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki7AYotGEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ki8OgItGEeqS39pfhQazug" name="setTypeValue" visibility="public" method="_Ki81kItGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki8OgYtGEeqS39pfhQazug" name="value" type="_RA73kYtEEeqS39pfhQazug"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ki81kYtGEeqS39pfhQazug" name="toString" visibility="public" method="_Ki9coYtGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki9coItGEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ki-DsItGEeqS39pfhQazug" name="toRDNDescription" visibility="public" method="_Ki_R0ItGEeqS39pfhQazug">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki-qwItGEeqS39pfhQazug" type="_RA73kYtEEeqS39pfhQazug" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Q7v1kItEEeqS39pfhQazug" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Q7v1kYtEEeqS39pfhQazug" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Q7v1kotEEeqS39pfhQazug" name="util">
+          <packagedElement xmi:type="uml:Class" xmi:id="_Q7wcoItEEeqS39pfhQazug" name="Set"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RBc08ItEEeqS39pfhQazug" name="HashSet"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_RA73kItEEeqS39pfhQazug" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_RA73kYtEEeqS39pfhQazug" name="String"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_RBqQUItEEeqS39pfhQazug" name="time">
+          <packagedElement xmi:type="uml:Class" xmi:id="_RBq3YItEEeqS39pfhQazug" name="Instant"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Q5BRsItEEeqS39pfhQazug">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q5E8EItEEeqS39pfhQazug" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Q51xEItEEeqS39pfhQazug">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q52YIItEEeqS39pfhQazug" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Q6DMcItEEeqS39pfhQazug">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q6EakItEEeqS39pfhQazug" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_RAE78ItEEeqS39pfhQazug" name="java.util.Set" base_Classifier="_Q7wcoItEEeqS39pfhQazug"/>
+  <PapyrusJava:External xmi:id="_RBBXIItEEeqS39pfhQazug" name="java.lang.String" base_Classifier="_RA73kYtEEeqS39pfhQazug"/>
+  <PapyrusJava:External xmi:id="_RBhtcItEEeqS39pfhQazug" name="java.util.HashSet" base_Classifier="_RBc08ItEEeqS39pfhQazug"/>
+  <PapyrusJava:External xmi:id="_RBvv4ItEEeqS39pfhQazug" name="java.time.Instant" base_Classifier="_RBq3YItEEeqS39pfhQazug"/>
+  <standard:Create xmi:id="_l6ENIItFEeqS39pfhQazug" base_BehavioralFeature="_l6BJ0ItFEeqS39pfhQazug"/>
+  <standard:Create xmi:id="_l6Lh4ItFEeqS39pfhQazug" base_BehavioralFeature="_l6HQcItFEeqS39pfhQazug"/>
+  <standard:Create xmi:id="_l6RogItFEeqS39pfhQazug" base_BehavioralFeature="_l6OlMItFEeqS39pfhQazug"/>
+  <standard:Create xmi:id="_l6XvIItFEeqS39pfhQazug" base_BehavioralFeature="_l6TdsItFEeqS39pfhQazug"/>
+  <standard:Create xmi:id="_KizEkItGEeqS39pfhQazug" base_BehavioralFeature="_KiwBQItGEeqS39pfhQazug"/>
+  <standard:Create xmi:id="_Ki39EItGEeqS39pfhQazug" base_BehavioralFeature="_Ki2H4ItGEeqS39pfhQazug"/>
+</xmi:XMI>

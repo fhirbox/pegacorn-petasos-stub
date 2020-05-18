@@ -61,7 +61,6 @@ public class RDN
         this.nameValue = namePair[1];
     }
     
-    
     public String getTypeName() {
         return nameType;
     }

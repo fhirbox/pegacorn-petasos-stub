@@ -25,6 +25,8 @@ package net.fhirbox.pegacorn.petasos.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.ListIterator;
 
 /**
@@ -33,32 +35,32 @@ import java.util.ListIterator;
  */
 public class FDN 
 {
-    private java.util.ArrayList<RDN> rdnElementSet;
+    private LinkedHashSet<RDN> rdnElementSet;
     
     public static String RDN_ENTRY_SEPERATOR = ".";
 
     public FDN() 
     {
-        rdnElementSet = new ArrayList<RDN>();
+        rdnElementSet = new LinkedHashSet<RDN>();
     }
     
     public FDN(Collection<RDN> originalElementSet) 
     {
-        this.rdnElementSet = new ArrayList<>(originalElementSet);
+        this.rdnElementSet = new LinkedHashSet<>(originalElementSet);
     }
     
     public FDN(FDN originalFDN) {
-    	this.rdnElementSet = new ArrayList<>(originalFDN.rdnElementSet);
+    	this.rdnElementSet = new LinkedHashSet<>(originalFDN.rdnElementSet);
     }
     
     public FDN( String qualifiedFDN ){
-        rdnElementSet = new ArrayList<RDN>();
+        rdnElementSet = new LinkedHashSet<RDN>();
         populateFDN(qualifiedFDN);
     }
 
     public void appendRDN( RDN pRDN)
     {
-        rdnElementSet.add(rdnElementSet.size(), pRDN);
+        rdnElementSet.add(pRDN);
     }
     
     public void populateFDN( String qualifiedFDN )
@@ -75,7 +77,7 @@ public class FDN
     	}
     	for(int counter = 0; counter < qualifiedElements.length; counter += 1) {
     		RDN newRDNElement = new RDN(qualifiedElements[counter]);
-    		rdnElementSet.add(counter, newRDNElement);
+    		rdnElementSet.add(newRDNElement);
     	}
         return;
     }
@@ -85,7 +87,7 @@ public class FDN
         String lShortFDN = new String();
         if( !rdnElementSet.isEmpty() )
         {
-            ListIterator<RDN> rdnIterator = rdnElementSet.listIterator();
+            Iterator<RDN> rdnIterator = rdnElementSet.iterator();
             while( rdnIterator.hasNext() )
             {
                 lShortFDN += rdnIterator.next().getTypeValue();
@@ -104,7 +106,7 @@ public class FDN
         Integer lCount = 0;
         if( !rdnElementSet.isEmpty() )
         {
-            ListIterator<RDN> rdnIterator = rdnElementSet.listIterator();
+            Iterator<RDN> rdnIterator = rdnElementSet.iterator();
             while( rdnIterator.hasNext() )
             {
                 RDN lRDN = rdnIterator.next();
@@ -129,7 +131,7 @@ public class FDN
          String lShortFDN = new String();
         if( !rdnElementSet.isEmpty() )
         {
-            ListIterator<RDN> rdnIterator = rdnElementSet.listIterator();
+            Iterator<RDN> rdnIterator = rdnElementSet.iterator();
             while( rdnIterator.hasNext() )
             {
                 RDN lRDN = rdnIterator.next();

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2020 ACT Health (Mark A. Hunter).
+ * Copyright 2020 Mark A. Hunter (ACT Health).
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,26 +21,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package net.fhirbox.pegacorn.petasos.model;
+package net.fhirbox.pegacorn.petasos.wup.processorframework;
+
+import net.fhirbox.pegacorn.petasos.model.FDN;
+import net.fhirbox.pegacorn.petasos.model.PetasosParcelBundle;
 
 /**
  *
- * @author ACT Health (Mark A. Hunter)
+ * @author Mark A. Hunter (ACT Health)
  */
-public enum UoWProcessingOutcomeEnum {
-    PEGACORN_UOW_OUTCOME_SUCCESS("pegacorn.uow.processingoutcome.success"),
-    PEGACORN_UOW_OUTCOME_FAILED("pegacorn.uow.processingoutcome.failed"),
-    PEGACORN_UOW_OUTCOME_INCOMPLETE("pegacorn.uow.processingoutcome.incomplete"),
-    PEGACORN_UOW_OUTCOME_NOTSTARTED("pegacorn.uow.processingoutcome.not_started");
+public class InterComponentBundleSenderWUP
+{
     
-    private String uowProcessingOutcome;
-    
-    private UoWProcessingOutcomeEnum(String uowProcessingOutcome ){
-        this.uowProcessingOutcome = uowProcessingOutcome;
+    InterComponentBundleSenderWUP (FDN parentComponentFDN, FDN functionFDN, String ingressMessageQueue, String targetMessageQueue){
+        
     }
     
-    public String getUoWProcessingOutcome(){
-        return(this.uowProcessingOutcome);
+    protected void sendBundle(PetasosParcelBundle bundleToSend ){
+        
     }
-    
 }

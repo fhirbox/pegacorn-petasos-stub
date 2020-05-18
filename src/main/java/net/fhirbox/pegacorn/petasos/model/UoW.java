@@ -24,7 +24,7 @@
 package net.fhirbox.pegacorn.petasos.model;
 
 import java.time.Instant;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -48,11 +48,11 @@ public class UoW {
      * The set of (JSON) objects that represent the ingress (or starting set) of 
      * information of this UoW. 
      */
-    private HashSet<String> uowIngressContent; // JSON Objects
+    private LinkedHashSet<UoWContentElement> uowIngressContent; // JSON Objects
     /**
      * The set of (JSON) objects created as part of the completion of this UoW. 
      */
-    private HashSet<String> uowEgressContent; // JSON Objects
+    private LinkedHashSet<UoWContentElement> uowEgressContent; // JSON Objects
     /**
      * The (enum) outcome status of the processing of this UoW. 
      */
@@ -61,19 +61,19 @@ public class UoW {
   
     // Constructurs
     
-    public UoW (FDN functionFDN, Set<String> theInput) {
+    public UoW (FDN functionFDN, Set<UoWContentElement> theInput) {
     	String generatedInstanceValue = Long.toString(Instant.now().getNano());
-    	this.uowIngressContent = new HashSet<>(theInput);
-    	this.uowEgressContent = new HashSet<>();
+    	this.uowIngressContent = new LinkedHashSet<>(theInput);
+    	this.uowEgressContent = new LinkedHashSet<>();
     	this.uowProcessingOutcome = UoWProcessingOutcomeEnum.PEGACORN_UOW_OUTCOME_NOTSTARTED;
     	this.uowFDN = new FDN(functionFDN);
     	RDN newRDN = new RDN("InstanceQualifier", generatedInstanceValue);
     	this.uowFDN.appendRDN(newRDN); 
     }
     
-    public UoW (FDN functionFDN, String uowQualifier,Set<String> theInput) {
-    	this.uowIngressContent = new HashSet<>(theInput);
-    	this.uowEgressContent = new HashSet<>();
+    public UoW (FDN functionFDN, String uowQualifier,Set<UoWContentElement> theInput) {
+    	this.uowIngressContent = new LinkedHashSet<>(theInput);
+    	this.uowEgressContent = new LinkedHashSet<>();
     	this.uowProcessingOutcome = UoWProcessingOutcomeEnum.PEGACORN_UOW_OUTCOME_NOTSTARTED;
     	this.uowFDN = new FDN(functionFDN);
     	RDN newRDN = new RDN("InstanceQualifier", uowQualifier);
@@ -83,9 +83,9 @@ public class UoW {
     public UoW (UoW originalUoW) {
     	this.uowFDN = new FDN(originalUoW.getUoWFDN());
     	this.requiredFunctionFDN = new FDN(originalUoW.getRequiredFunctionFDN());
-    	this.uowIngressContent = new HashSet<>();
+    	this.uowIngressContent = new LinkedHashSet<>();
     	this.uowIngressContent.addAll(originalUoW.getUowIngressContent());
-    	this.uowEgressContent = new HashSet<>();
+    	this.uowEgressContent = new LinkedHashSet<>();
     	this.uowEgressContent.addAll(originalUoW.getUowEgressContent());
     	this.uowProcessingOutcome = originalUoW.getUowProcessingOutcome();
     }
@@ -98,20 +98,20 @@ public class UoW {
         this.uowFDN = uowID;
     }
 
-    public Set<String> getUowIngressContent() {
+    public Set<UoWContentElement> getUowIngressContent() {
         return uowIngressContent;
     }
 
-    public void setUowIngressContent(Set<String> uowIngressContent) {
+    public void setUowIngressContent(Set<UoWContentElement> uowIngressContent) {
         this.uowIngressContent.clear();
         this.uowIngressContent.addAll(uowIngressContent);
     }
 
-    public Set<String> getUowEgressContent() {
+    public Set<UoWContentElement> getUowEgressContent() {
         return uowEgressContent;
     }
 
-    public void setUowEgressContent(Set<String> uowEgressContent) {
+    public void setUowEgressContent(Set<UoWContentElement> uowEgressContent) {
         this.uowEgressContent.clear();
         this.uowEgressContent.addAll(uowEgressContent);
     }

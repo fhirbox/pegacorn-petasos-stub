@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2020 ACT Health (Mark A. Hunter).
+ * Copyright 2020 Mark A. Hunter (ACT Health).
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,23 +25,35 @@ package net.fhirbox.pegacorn.petasos.model;
 
 /**
  *
- * @author ACT Health (Mark A. Hunter)
+ * @author Mark A. Hunter (ACT Health)
  */
-public enum ComponentTypeEnum {
-    PEGACORN_DEPLOYMENT("pegacorn.deployment"),
-    PEGACORN_SYSTEM("pegacorn.system"),
-    PEGACORN_POD("pegacorn.pod"),
-    PEGACORN_MODULE("pegacorn.module"),
-    PEGACORN_WUP("pegacorn.work_unit_processor");
+public class UoWContentElement
+{
+    String elementContent;
+    String elementDescriptor;
     
-    private String componentType;
-    
-    private ComponentTypeEnum(String componentType ){
-        this.componentType = componentType;
+    public UoWContentElement( String content, String descriptor){
+        this.elementContent = content;
+        this.elementDescriptor = descriptor;
     }
-    
-    public String getComponentType(){
-        return(this.componentType);
+
+    public String getElementContent()
+    {
+        return elementContent;
     }
-    
+
+    public void setElementContent(String elementContent)
+    {
+        this.elementContent = elementContent;
+    }
+
+    public String getElementDescriptor()
+    {
+        return elementDescriptor;
+    }
+
+    public void setElementDescriptor(String elementDescriptor)
+    {
+        this.elementDescriptor = elementDescriptor;
+    }
 }

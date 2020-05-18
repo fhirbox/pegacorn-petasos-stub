@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2020 ACT Health (Mark A. Hunter).
+ * Copyright 2020 Mark A. Hunter (ACT Health).
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,24 +23,19 @@
  */
 package net.fhirbox.pegacorn.petasos.model;
 
+import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.r4.model.MessageHeader;
+
 /**
  *
- * @author ACT Health (Mark A. Hunter)
+ * @author Mark A. Hunter (ACT Health)
  */
-public enum UoWProcessingOutcomeEnum {
-    PEGACORN_UOW_OUTCOME_SUCCESS("pegacorn.uow.processingoutcome.success"),
-    PEGACORN_UOW_OUTCOME_FAILED("pegacorn.uow.processingoutcome.failed"),
-    PEGACORN_UOW_OUTCOME_INCOMPLETE("pegacorn.uow.processingoutcome.incomplete"),
-    PEGACORN_UOW_OUTCOME_NOTSTARTED("pegacorn.uow.processingoutcome.not_started");
-    
-    private String uowProcessingOutcome;
-    
-    private UoWProcessingOutcomeEnum(String uowProcessingOutcome ){
-        this.uowProcessingOutcome = uowProcessingOutcome;
-    }
-    
-    public String getUoWProcessingOutcome(){
-        return(this.uowProcessingOutcome);
-    }
-    
+public interface PetasosParcelBundle
+{
+    public void setBundleAsPOJO( Bundle thePOJO);
+    public Bundle getBundleAsPOJO();  
+    public void setBundleMessageHeader( MessageHeader msgHeader);
+    public MessageHeader getBundleMessageHeader();
+    public void setPetasosParcel( PetasosParcel newParcel);
+    public PetasosParcel getPetasosParcel();
 }

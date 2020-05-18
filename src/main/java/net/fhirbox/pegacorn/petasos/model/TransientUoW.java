@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2020 ACT Health (Mark A. Hunter).
+ * Copyright 2020 mhunter.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,13 +24,31 @@
 package net.fhirbox.pegacorn.petasos.model;
 
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
- * @author ACT Health (Mark A. Hunter)
+ * @author mhunter
  */
-public class ComponentInstanceCertificate {
-    private Instant registrationInstant;
-    private Instant registrationEndInstant;
-    private String hashKey;
+
+public class TransientUoW extends UoW {
+    
+    
+
+//    public TransientUoW(){
+//        super();
+//    }
+    
+    public TransientUoW (FDN functionFDN, Set<UoWContentElement> theInput) {
+    	super(functionFDN, theInput);
+    }
+    
+    public TransientUoW (FDN functionFDN, String uowQualifier,Set<UoWContentElement> theInput) {
+    	super(functionFDN, uowQualifier, theInput);
+    }
+    
+    public TransientUoW (TransientUoW originalUoW) {
+        super(originalUoW);
+    }    
 }
