@@ -23,18 +23,31 @@
  */
 package net.fhirbox.pegacorn.petasos.wup.interchange;
 
-import java.util.Set;
-import net.fhirbox.pegacorn.petasos.model.FDN;
-
 /**
  *
  * @author Mark A. Hunter (ACT Health)
  */
-public interface WUPInterchangeServiceInterface
+public class DefaultCamelWUPInterchangeEgressConnection
 {
-    public String registerEgressWUP( FDN wupFDN, FDN wupFunctionFDN, Set<FDN> uowContentTypeFDN);
-    public String registerIngressWUP( FDN wupFDN, FDN wupFunctionFDN, Set<FDN> uowContentTypeFDN);
+    private String connectionIdentifier;
+
+    public DefaultCamelWUPInterchangeEgressConnection(String connectionIdentifier)
+    {
+        this.connectionIdentifier = connectionIdentifier;
+    }
+
+    public DefaultCamelWUPInterchangeEgressConnection()
+    {
+        connectionIdentifier = null;
+    }
     
-    public void notifySuccessfulParcelRegistration(FDN petasosParcelFDN, FDN uowFDN);
-    public void notifyFailedParcelRegistration(FDN uowFDN);
+    public String getConnectionIdentifier()
+    {
+        return connectionIdentifier;
+    }
+
+    public void setConnectionIdentifier(String connectionIdentifier)
+    {
+        this.connectionIdentifier = connectionIdentifier;
+    }    
 }
