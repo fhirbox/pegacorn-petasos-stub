@@ -23,6 +23,7 @@
  */
 package net.fhirbox.pegacorn.petasos.wup.processorframework;
 
+import java.util.HashSet;
 import java.util.Set;
 import net.fhirbox.pegacorn.petasos.model.ComponentStatusEnum;
 import net.fhirbox.pegacorn.petasos.model.FDN;
@@ -40,6 +41,7 @@ public class DefaultCamelWorkUnitProcessor implements WorkUnitProcessorInterface
     private PetasosParcel currentParcel;
     private FDN supportedFunctionFDN;
     private ComponentStatusEnum processorStatus;
+    private HashSet<FDN> supportedUoWContentTypeSet;
 
     public DefaultCamelWorkUnitProcessor(FDN newProcessorFDN, FDN newSupportedFunction)
     {
@@ -47,6 +49,7 @@ public class DefaultCamelWorkUnitProcessor implements WorkUnitProcessorInterface
         this.currentParcel = null;
         this.supportedFunctionFDN = newSupportedFunction;
         this.processorStatus = ComponentStatusEnum.COMPONENT_STATUS_IDLE;
+        this.supportedUoWContentTypeSet = new HashSet<FDN>();
     }
 
     /**

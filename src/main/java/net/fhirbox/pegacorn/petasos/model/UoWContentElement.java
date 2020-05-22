@@ -30,11 +30,11 @@ package net.fhirbox.pegacorn.petasos.model;
 public class UoWContentElement
 {
     String elementContent;
-    String elementDescriptor;
+    String elementTypeFDN;
     
     public UoWContentElement( String content, String descriptor){
         this.elementContent = content;
-        this.elementDescriptor = descriptor;
+        this.elementTypeFDN = descriptor;
     }
 
     public String getElementContent()
@@ -47,13 +47,22 @@ public class UoWContentElement
         this.elementContent = elementContent;
     }
 
-    public String getElementDescriptor()
+    public String getElementTypeFDNAsString()
     {
-        return elementDescriptor;
+        return elementTypeFDN;
     }
 
-    public void setElementDescriptor(String elementDescriptor)
+    public void setElementTypeFDNAsString(String elementDescriptor)
     {
-        this.elementDescriptor = elementDescriptor;
+        this.elementTypeFDN = elementDescriptor;
+    }
+    
+    public FDN getElementTypeFDN(){
+        FDN uowFDN = new FDN(this.elementTypeFDN);
+        return(uowFDN);
+    }
+    
+    public void setElementTypeFDN(FDN elementFDN){
+        this.elementTypeFDN = elementFDN.getQualifiedFDN();
     }
 }
