@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2020 Mark A. Hunter (ACT Health).
+ * Copyright 2020 mhunter.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,11 +23,22 @@
  */
 package net.fhirbox.pegacorn.petasos.wup.interchange;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import javax.inject.Singleton;
+
 /**
  *
- * @author Mark A. Hunter (ACT Health)
+ * @author mhunter
  */
-public class DefaultInterComponentWUPInterchange
-{
+
+@Singleton
+public class DefaultWUPinterchangeFactory {
+    private HashMap<String, String> interchangeSet;
     
+    public String createInterchange( String interchangeName ){
+        String createdInterchangeName = null;
+        
+        return(createdInterchangeName);
+    }
 }

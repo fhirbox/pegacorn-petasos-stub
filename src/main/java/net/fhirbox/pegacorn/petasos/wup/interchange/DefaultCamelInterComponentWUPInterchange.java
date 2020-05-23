@@ -22,17 +22,12 @@
  * THE SOFTWARE.
  */
 package net.fhirbox.pegacorn.petasos.wup.interchange;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.jms.ConnectionFactory;
 
-import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.component.jms.JmsComponent;
 /**
  *
  * @author Mark A. Hunter (ACT Health)
  */
-public class DefaultIntraComponentWUPInterchange extends RouteBuilder implements WUPInterchangeServiceInterface
+public class DefaultCamelInterComponentWUPInterchange
 {
     
 }
